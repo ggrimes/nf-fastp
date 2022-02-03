@@ -31,7 +31,7 @@ process FASTP {
    path "${sample_id}.json", emit: json_report
    script:
    """
-   fastp -i ${fq[0]} -I ${fq[1]} -o out.R1.fq.gz -O out.R2.fq.gz -h ${sample_id}.html -j ${sample_id}.json
+   fastp -i ${fq[0]} -I ${fq[1]} -o out.R1.fq.gz -O out.R2.fq.gz -h ${sample_id}.html -j ${sample_id}.fastp.json
    """
 
 }
