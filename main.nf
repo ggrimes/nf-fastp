@@ -13,7 +13,7 @@ fq_ch=channel.fromFilePairs(params.fq)
 
 
 workflow {
-    FASTP(bam_ch)
+    FASTP(fq_ch)
 }
 
 
