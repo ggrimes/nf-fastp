@@ -50,7 +50,9 @@ process MULTIQC {
    """
    multiqc .
    """
+}
 
-
-
+workflow.onComplete {
+    println "Pipeline completed at: $workflow.complete"
+    println "Execution status: ${ workflow.success ? 'OK' : 'failed' }"
 }
