@@ -13,7 +13,7 @@ fq_ch=channel.fromFilePairs(params.fq)
 
 
 workflow {
-    FASTP(fq_ch).collect()|MULTIQC
+    FASTP(fq_ch).out.json_report.collect()|MULTIQC
 }
 
 
